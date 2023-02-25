@@ -30,7 +30,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/catalog') }}">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/where') }}">Где нас найти?</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
