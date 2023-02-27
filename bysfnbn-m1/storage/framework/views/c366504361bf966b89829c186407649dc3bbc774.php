@@ -20,7 +20,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="name" value="<?php echo e(old('name')); ?>" required autocomplete="name" autofocus>
+unset($__errorArgs, $__bag); ?>" name="name" value="<?php echo e(old('name')); ?>" pattern="^[А-Яа-яЁё\s-]+$" required autocomplete="name" autofocus >
 
                                 <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -48,7 +48,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="surname" value="<?php echo e(old('surname')); ?>" required autocomplete="surname" autofocus>
+unset($__errorArgs, $__bag); ?>" name="surname" value="<?php echo e(old('surname')); ?>" pattern="^[А-Яа-яЁё\s-]+$"  required autocomplete="surname" autofocus>
 
                                 <?php $__errorArgs = ['surname'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -76,7 +76,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="patronymic" value="<?php echo e(old('patronymic')); ?>" required autocomplete="patronymic" autofocus>
+unset($__errorArgs, $__bag); ?>" name="patronymic" value="<?php echo e(old('patronymic')); ?>" pattern="^[А-Яа-яЁё\s-]+$"  required autocomplete="patronymic" autofocus>
 
                                 <?php $__errorArgs = ['patronymic'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -104,7 +104,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="login" value="<?php echo e(old('login')); ?>" required autocomplete="login" autofocus>
+unset($__errorArgs, $__bag); ?>" name="login" value="<?php echo e(old('login')); ?>" pattern="^[a-zA-Z-]+$"  required autocomplete="login" autofocus>
 
                                 <?php $__errorArgs = ['login'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
