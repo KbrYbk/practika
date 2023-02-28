@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                            <a class="nav-link" href="{{ url('/') }}">О нас</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/catalog') }}">Каталог</a>

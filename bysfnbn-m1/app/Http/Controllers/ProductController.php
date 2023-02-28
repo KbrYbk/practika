@@ -10,4 +10,9 @@ class ProductController extends Controller
         $p=\App\Models\product::OrderBy('id','desc')->limit(5)->get();
         return view ('about', ['prod'=>$p]);
     }
+
+    public function catalog(){
+        $p=\App\Models\product::OrderBy('id','desc')->get();
+        return view ('catalog', ['prod'=>$p]);
+    }
 }
