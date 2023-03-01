@@ -17,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\ProductController::class, 'about']);
+Route::get('/', [App\Http\Controllers\ProductController::class, 'about']); //слайдер о нас
+Route::get('/catalog', [App\Http\Controllers\ProductController::class, 'catalog']); //страница каталога
+Route::get('/catalog/sort/{name}/{nap}',[App\Http\Controllers\ProductController::class, 'catalog']); //сортировка
 
-Route::get('/where', function () {
+Route::get('/where', function () { //страница 
     return view('where');
 });
 
