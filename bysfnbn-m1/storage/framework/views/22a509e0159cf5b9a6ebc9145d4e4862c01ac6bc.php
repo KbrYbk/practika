@@ -10,26 +10,14 @@
                 </div>
 
                 <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Сортировка
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Фильтры
                     </button>
-                    <ul class="dropdown-menu ms-auto" aria-labelledby="dropdownMenuButton1">
-
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/id/desc" />от недавно добавленных к
-                            старым</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <?php $__currentLoopData = $cat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $obcat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/filter')); ?>/<?php echo e($obcat->id); ?>"><?php echo e($obcat->category); ?></a>
                         </li>
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/id/asc" />от старых к недавно добавленым</a>
-                        </li>
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/price/asc" />от дешевых к дорогим</a>
-                        </li>
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/price/desc" />от дорогих к дешевым</a>
-                        </li>
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/year_of_production/desc" />от недавно
-                            вышедшим к старым</a>
-                        </li>
-                        <li><a class="dropdown-item" href="<?php echo e(url('/catalog/sort')); ?>/year_of_production/asc" />от старых к недавно
-                            вышедшим</a>
-                        </li>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <li><a class="dropdown-item" href="<?php echo e(url('/catalog')); ?>">сборосить фильтр</a></li>
                     </ul>
                 </div>
@@ -45,6 +33,9 @@
                         <div class="col-7">
                             <h1><?php echo e($pp->name); ?></h1><!--вывод имени товара с базы-->
                             <h3><?php echo e($pp->price); ?></h3><!--вывод цены товара с базы-->
+                            <?php if(auth()->guard()->check()): ?>
+                            <button type="button" class="btn btn-info mb-auto">Купить</button>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
