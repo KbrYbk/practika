@@ -19,8 +19,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\ProductController::class, 'about']); //слайдер о нас
 Route::get('/catalog', [App\Http\Controllers\ProductController::class, 'catalog']); //страница каталога
-Route::get('/catalog/sort/{name}/{nap}', [App\Http\Controllers\ProductController::class, 'catalog']); //сортировка
-Route::get('/catalog/filter/{id}', [App\Http\Controllers\ProductController::class, 'filtr']);
-Route::get('/where', function () { //страница 
+Route::get('/catalog/sort/{name}/{vis}', [App\Http\Controllers\ProductController::class, 'catalog']); //сортировка
+Route::get('/catalog/filter/{id}', [ProductController::class, 'filtr']);
+Route::get('/where', function () { // где нас найти
     return view('where');
 });

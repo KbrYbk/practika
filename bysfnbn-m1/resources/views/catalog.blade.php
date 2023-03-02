@@ -4,23 +4,26 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="d-flex">
+            <div class="d-flex"> <!--сортировка и фильтр-->
                 <div class="btn-group mb-3 me-auto"> <!--селектор с сортировкой-->
                     <a href="{{url('/catalog/sort')}}/name/asc" class="btn btn-primary" aria-current="page">По наименованию</a>
                     <a href="{{url('/catalog/sort')}}/year/desc" class="btn btn-primary">По году</a>
                     <a href="{{url('/catalog/sort')}}/price/desc" class="btn btn-primary">По цене</a>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown"> <!--выпадающий фильтр по категории-->
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Фильтры
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        @foreach($cat as $obcat)
-                        <li><a class="dropdown-item" href="{{url('/catalog/filter')}}/{{$obcat->id}}">{{$obcat->category}}</a>
+                        @foreach($cat as $categotya)
+                        <li>
+                            <a class="dropdown-item" href="{{url('/catalog/filter')}}/{{$categotya->id}}">{{$categotya->category}}</a>
                         </li>
                         @endforeach
-                        <li><a class="dropdown-item" href="{{url('/catalog')}}">сборосить фильтр</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{{url('/catalog')}}">По умолчанию</a>
+                        </li>
                     </ul>
                 </div>
             </div>
