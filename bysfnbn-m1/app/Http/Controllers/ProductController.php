@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function catalog($name = 'id', $sort = 'desc')
     { //каталог
         $tovar = \App\Models\product::OrderBy($name, $sort)->where('count', '>', '0')->get(); //вывод всего товара в наличии
-        $cat = \App\Models\product::all();
+        $cat = \App\Models\categories::all();
         return view('catalog', ['prod' => $tovar, 'cat' => $cat]);
     }
 
@@ -23,6 +23,6 @@ class ProductController extends Controller
     { //фильтр
         $tovar = \App\Models\product::where('category', $id)->get(); //вывод только со столбика категории
         $cat = \App\Models\categories::all();
-        return view(['catalog', 'prod' => $tovar, 'cat' => $cat]);
+        return view('catalog', ['prod' => $tovar, 'cat' => $cat]);
     }
 }

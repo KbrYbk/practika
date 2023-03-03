@@ -20,7 +20,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\ProductController::class, 'about']); //слайдер о нас
 Route::get('/catalog', [App\Http\Controllers\ProductController::class, 'catalog']); //страница каталога
 Route::get('/catalog/sort/{name}/{vis}', [App\Http\Controllers\ProductController::class, 'catalog']); //сортировка
-Route::get('/catalog/filter/{id}', [ProductController::class, 'filtr']);
+Route::get('/catalog/filter/{id}', [App\Http\Controllers\ProductController::class, 'filtr']);//фильтр
 Route::get('/where', function () { // где нас найти
     return view('where');
 });
