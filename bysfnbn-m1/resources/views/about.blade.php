@@ -9,7 +9,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-3">
-                    <img src="../resources/img/logo.png" alt="logo"> <!-- лого -->
+                    <img src="../public/img/logo.png" alt="logo"> <!-- лого -->
                 </div>
                 <div class="col-8">
                     <h1>ДЛЯ ТЕХ, КТО

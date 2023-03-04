@@ -25,4 +25,10 @@ class ProductController extends Controller
         $cat = \App\Models\categories::all();
         return view('catalog', ['prod' => $tovar, 'cat' => $cat]);
     }
+
+    public function onetovar($id)
+    { //один товар
+        $tovar = \App\Models\product::where('id',$id)->get(); //вывод всего товара в наличии
+        return view('tovar', ['prod' => $tovar]);
+    }
 }
