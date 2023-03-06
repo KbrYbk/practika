@@ -4,7 +4,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <img src="/public/img/map.jpg" class="w-100" alt="">
+                    <img src="../public/img/map.jpg" class="w-100" alt="">
                 </div>
 
                 <div class="card-body">

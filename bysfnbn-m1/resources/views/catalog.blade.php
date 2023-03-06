@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="d-flex"> <!--сортировка и фильтр-->
                 <div class="btn-group mb-3 me-auto"> <!--селектор с сортировкой-->
-                    <a href="{{url('/catalog/sort')}}/name/asc" class="btn btn-primary" aria-current="page">По наименованию</a>
                     <a href="{{url('/catalog/sort')}}/year/desc" class="btn btn-primary">По году</a>
+                    <a href="{{url('/catalog/sort')}}/name/asc" class="btn btn-primary" aria-current="page">По наименованию</a>
                     <a href="{{url('/catalog/sort')}}/price/desc" class="btn btn-primary">По цене</a>
                 </div>
                 <div class="mx-3"> <!--сброс сортировки и фильтра-->
@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-7">
                             <h1>{{ $pp->name }}</h1><!--вывод имени товара с базы-->
-                            <h3>{{ $pp->price }}</h3><!--вывод цены товара с базы-->
+                            <h3>{{ $pp->price }} &#8381</h3><!--вывод цены товара с базы-->
                             @auth
                             <button type="button" class="btn btn-info mb-auto">Купить</button>
                             @endauth

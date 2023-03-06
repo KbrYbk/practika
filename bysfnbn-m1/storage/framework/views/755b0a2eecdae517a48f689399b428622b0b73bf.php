@@ -17,7 +17,7 @@
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
     <div id="app">

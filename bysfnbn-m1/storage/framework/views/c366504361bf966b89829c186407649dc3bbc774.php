@@ -76,7 +76,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="patronymic" value="<?php echo e(old('patronymic')); ?>" pattern="^[А-Яа-яЁё\s-]+$"  required autocomplete="patronymic" autofocus>
+unset($__errorArgs, $__bag); ?>" name="patronymic" value="<?php echo e(old('patronymic')); ?>" pattern="^[А-Яа-яЁё\s-]+$" autocomplete="patronymic" autofocus>
 
                                 <?php $__errorArgs = ['patronymic'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

@@ -43,7 +43,7 @@
                             <label for="patronymic" class="col-md-4 col-form-label text-md-end">{{ __('Отчество') }}</label>
 
                             <div class="col-md-6">
-                                <input id="patronymic" type="text" class="form-control @error('patronymic') is-invalid @enderror" name="patronymic" value="{{ old('patronymic') }}" pattern="^[А-Яа-яЁё\s-]+$"  required autocomplete="patronymic" autofocus>
+                                <input id="patronymic" type="text" class="form-control @error('patronymic') is-invalid @enderror" name="patronymic" value="{{ old('patronymic') }}" pattern="^[А-Яа-яЁё\s-]+$" autocomplete="patronymic" autofocus>
 
                                 @error('patronymic')
                                     <span class="invalid-feedback" role="alert">
