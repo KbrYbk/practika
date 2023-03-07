@@ -30,8 +30,14 @@ Route::get('/catalog/tovar/{id}', [ProductController::class, 'onetovar']); //с�
 Route::get('/catalog/sort/{name}/{vis}', [ProductController::class, 'catalog']); //сортировка
 Route::get('/catalog/filter/{id}', [ProductController::class, 'filtr']); //фильтр
 //админ
-Route::get('/admin', [Admin::class, 'admin'])->name('admin'); //админ
+Route::get('/admin', [Admin::class, 'admin'])->name('admin'); //страница админа с редактированием данных
+//админ-товар
 Route::get('/admin/product', [Admin::class, 'form']); //Форма создания товара
 Route::post('/admin/product/create', [Admin::class, 'maketovar'])->name('makeprod'); // Отправка данных товара в базу данных
-Route::get('/admin/product/delete/{id}', [Admin::class, 'proddel']);//Удаление продукта из базы данных
+Route::get('/admin/product/delete/{id}', [Admin::class, 'proddel']); //Удаление продукта из базы данных
+//админ-категория
+Route::get('/admin/category', function () {
+    return view('makecategory');
+}); //Форма создания категории
+Route::post('/admin/category/create', [Admin::class, 'makecategory'])->name('makecategory'); // Отправка данных категории в базу данных
 Route::get('/admin/category/delete/{id}', [Admin::class, 'categoriesdel']);//Удаление категории из базы данных

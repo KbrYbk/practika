@@ -4,10 +4,10 @@
 <div class="container">
     <h1 class="text-center mb-3">Админ панель</h1>
     <h4 class="text-center">Редактирование товара</h4>
-    <a class="btn btn-info mb-3" href="{{url('/admin/product/create')}}" role="button">Опубликовать товар</a><!--Кнопка на создание товара-->
+    <a class="btn btn-info mb-3" href="{{url('/admin/product')}}" role="button">Опубликовать товар</a><!--Кнопка на создание товара-->
     <div class="row row-cols-2">
         @foreach ($prod as $pp) <!--вывод товара-->
-        <div class="col mb-5">
+        <div class="col mb-3">
             <div class="card h-100">
                 <div class="card-body">
                     <div class="row">
@@ -35,10 +35,10 @@
         @endforeach
     </div>
     <h4 class="text-center">Редактирование категории</h4>
-    <a class="btn btn-info mb-3" href="{{url('/admin/category/create')}}" role="button">Добавить категорию</a><!--Кнопка на добавление категории-->
+    <a class="btn btn-info mb-3" href="{{url('/admin/category')}}" role="button">Добавить категорию</a><!--Кнопка на добавление категории-->
     <div class="row row-cols-2">
         @foreach ($cat as $pp) <!--вывод категорий-->
-        <div class="col mb-5">
+        <div class="col mb-3">
             <div class="card h-100">
                 <div class="card-body">
                     <div class="row">

@@ -15,7 +15,7 @@
                 </div>
                 <div class="dropdown"> <!--выпадающий фильтр по категории-->
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Категроии
+                        Категории
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                         @foreach($cat as $categorya)
