@@ -41,9 +41,15 @@ class Admin extends Controller
 
     //     return redirect(route('admin'));
     // }
-    public function proddel($id)
+    public function proddel($id) //удалить товар
     {
         product::where('id', $id)->delete();
+        return redirect(route('admin'));
+    }
+
+    public function categoriesdel($id) //удалить категорию
+    {
+        categories::where('id', $id)->delete();
         return redirect(route('admin'));
     }
 }
