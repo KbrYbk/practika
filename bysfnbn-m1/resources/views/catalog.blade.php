@@ -32,7 +32,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <img src="{{ $pp->img }}" class="d-block w-100 " alt="tovar"><!--вывод изображения товара с базы-->
+                            <img src="{{url('/img/tovary')}}/{{ $pp->img }}" class="d-block w-100 " alt="tovar"><!--вывод изображения товара с базы-->
                         </div>
                         <div class="col-7">
                             <h1>{{ $pp->name }}</h1><!--вывод имени товара с базы-->

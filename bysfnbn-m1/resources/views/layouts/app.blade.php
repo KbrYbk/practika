@@ -17,7 +17,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="{{url('/')}}/style.css">
 </head>
 <body>
     <div id="app">

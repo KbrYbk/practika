@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <style>
-    </style>
     <div class="container">
         <div class="card">
             <!-- карточка с лого и девизом-->
@@ -31,7 +29,7 @@
                         @else
                             <div class="carousel-item">
                     @endif
-                    <img src="{{ $pp->img }}" class="d-block mx-auto carousel-img" alt="tovar">
+                    <img src="{{url('/img/tovary')}}/{{ $pp->img }}" class="d-block mx-auto carousel-img" alt="tovar">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="name_tovar">{{ $pp->name }}</h1>
                     </div>
