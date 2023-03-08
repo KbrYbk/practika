@@ -27,7 +27,7 @@
                         <h3>{{ $pp->model }}</h3>
                         <!--вывод модель товара с базы-->
                         @auth
-                        <button type="button" class="btn btn-info mb-auto">Купить</button>
+                        <a class="btn btn-info" href="{{url('/cart/make')}}/{{'$pp->id'}}" role="button">В корзину</a>
                         @endauth
                     </div>
                 </div>

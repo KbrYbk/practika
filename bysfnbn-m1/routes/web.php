@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BasketShop;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,4 +43,11 @@ Route::get('/admin/category', function () {
     return view('makecategory');
 })->middleware('admin'); //Форма создания категории
 Route::post('/admin/category/create', [Admin::class, 'makecategory'])->name('makecategory'); // Отправка данных категории в базу данных
-Route::get('/admin/category/delete/{id}', [Admin::class, 'categoriesdel'])->middleware('admin');//Удаление категории из базы данных
+Route::get('/admin/category/delete/{id}', [Admin::class, 'categoriesdel'])->middleware('admin'); //Удаление категории из базы данных
+
+//корзина
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/cart', [BasketShop::class, 'index'])->name('cart.index');
+    Route::get('/cart/make/{product_id}', [BasketShop::class, 'make'])->name('cartmake');
+    Route::get('/cart/delete/{cart_id}', [BasketShop::class, 'delete'])->name('cartdelete');
+});

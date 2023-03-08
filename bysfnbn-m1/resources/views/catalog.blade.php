@@ -38,7 +38,7 @@
                             <h1>{{ $pp->name }}</h1><!--вывод имени товара с базы-->
                             <h3>{{ $pp->price }} &#8381</h3><!--вывод цены товара с базы-->
                             @auth
-                            <button type="button" class="btn btn-info mb-auto">Купить</button>
+                            <button type="button" class="btn btn-info mb-auto">Подробнее</button>
                             @endauth
                             <a href="{{url('/catalog/tovar')}}/{{$pp->id}}" class="stretched-link"></a>
                         </div>
