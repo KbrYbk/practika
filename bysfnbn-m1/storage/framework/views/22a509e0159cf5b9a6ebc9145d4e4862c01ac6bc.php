@@ -13,7 +13,7 @@
                 </div>
                 <div class="dropdown"> <!--выпадающий фильтр по категории-->
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Категроии
+                        Категории
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                         <?php $__currentLoopData = $cat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categorya): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -30,13 +30,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <img src="<?php echo e($pp->img); ?>" class="d-block w-100 " alt="tovar"><!--вывод изображения товара с базы-->
+                            <img src="<?php echo e(url('/img/tovary')); ?>/<?php echo e($pp->img); ?>" class="d-block w-100 " alt="tovar"><!--вывод изображения товара с базы-->
                         </div>
                         <div class="col-7">
                             <h1><?php echo e($pp->name); ?></h1><!--вывод имени товара с базы-->
                             <h3><?php echo e($pp->price); ?> &#8381</h3><!--вывод цены товара с базы-->
                             <?php if(auth()->guard()->check()): ?>
-                            <button type="button" class="btn btn-info mb-auto">Купить</button>
+                            <button type="button" class="btn btn-info mb-auto">Подробнее</button>
                             <?php endif; ?>
                             <a href="<?php echo e(url('/catalog/tovar')); ?>/<?php echo e($pp->id); ?>" class="stretched-link"></a>
                         </div>

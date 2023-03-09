@@ -21,14 +21,14 @@ class ProductController extends Controller
 
     public function filtr($id)
     { //фильтр
-        $tovar = \App\Models\product::where('category', $id)->get(); //вывод только со столбика категории
+        $tovar = \App\Models\product::where('category', $id)->where('count', '>', '0')->get(); //вывод только со столбика категории
         $cat = \App\Models\categories::all();
         return view('catalog', ['prod' => $tovar, 'cat' => $cat]);
     }
 
     public function onetovar($id)
     { //один товар
-        $tovar = \App\Models\product::where('id',$id)->get(); //вывод всего товара в наличии
+        $tovar = \App\Models\product::where('id', $id)->get();
         return view('tovar', ['prod' => $tovar]);
     }
 }
