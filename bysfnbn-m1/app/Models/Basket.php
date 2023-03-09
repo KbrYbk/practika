@@ -12,7 +12,10 @@ class Basket extends Model
         'user_id',
         'product_id',
     ];
+<<<<<<< HEAD
     public function prod() {
         return $this->hasOne(product::class, 'id','product_id');
     }
+=======
+>>>>>>> 3c259c04aaa426ebd4405d1b71afaadd462e6534
 }

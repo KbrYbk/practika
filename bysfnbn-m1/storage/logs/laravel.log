@@ -14367,6 +14367,7 @@ Did you mean one of these?
 #57 C:\\OSPanel\\domains\\practika\\bysfnbn-m1\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
 #58 {main}
 "} 
+<<<<<<< HEAD
 [2023-03-09 08:35:46] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `products` order by `id` desc limit 5) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `products` order by `id` desc limit 5) at /srv/users/fvfueztk/bysfnbn-m1/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
 [stacktrace]
 #0 /srv/users/fvfueztk/bysfnbn-m1/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback()
@@ -16069,3 +16070,5 @@ Did you mean one of these?
 #57 /srv/users/fvfueztk/bysfnbn-m1/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
 #58 {main}
 "} 
+=======
+>>>>>>> 3c259c04aaa426ebd4405d1b71afaadd462e6534

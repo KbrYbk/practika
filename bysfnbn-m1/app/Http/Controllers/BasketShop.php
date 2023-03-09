@@ -14,7 +14,12 @@ class BasketShop extends Controller
         $user_id = auth()->id();
 
         $cart_items = Basket::where('user_id', $user_id)
+<<<<<<< HEAD
             ->get();
+=======
+            ->join('products', 'baskets.product_id', '=', 'products.id')
+            ->get(['products.*']);
+>>>>>>> 3c259c04aaa426ebd4405d1b71afaadd462e6534
 
         return view('basket', compact('cart_items'));
     }

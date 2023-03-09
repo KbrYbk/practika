@@ -27,7 +27,11 @@
                         <h3>{{ $pp->model }}</h3>
                         <!--вывод модель товара с базы-->
                         @auth
+<<<<<<< HEAD
                         <a class="btn btn-info" href="{{url('/cart/make')}}/{{$pp->id}}" role="button">В корзину</a>
+=======
+                        <a class="btn btn-info" href="{{url('/cart/make')}}/{{'$pp->id'}}" role="button">В корзину</a>
+>>>>>>> 3c259c04aaa426ebd4405d1b71afaadd462e6534
                         @endauth
                     </div>
                 </div>
