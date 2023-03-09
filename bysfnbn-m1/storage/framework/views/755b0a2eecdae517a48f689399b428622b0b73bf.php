@@ -45,13 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo e(url('/where')); ?>">Где нас найти?</a>
                         </li>
-                        <?php if(!Auth::check() || !Auth::user()->isAdmin()): ?>
 
-                        <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo e(url('/admin')); ?>">Админка</a>
-                        </li>
-                        <?php endif; ?>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,6 +64,16 @@
                         </li>
                         <?php endif; ?>
                         <?php else: ?>
+                        <?php if(!Auth::check() || !Auth::user()->isAdmin()): ?>
+
+                        <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo e(url('/admin')); ?>">Админка</a>
+                        </li>
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo e(url('/cart')); ?>">Козрзина</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <?php echo e(Auth::user()->name); ?>
@@ -100,4 +104,5 @@
     </div>
 </body>
 
-</html><?php /**PATH /srv/users/fvfueztk/bysfnbn-m1/resources/views/layouts/app.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH /srv/users/fvfueztk/bysfnbn-m1/resources/views/layouts/app.blade.php ENDPATH**/ ?>

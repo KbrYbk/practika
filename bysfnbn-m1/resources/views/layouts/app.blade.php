@@ -44,13 +44,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/where') }}">Где нас найти?</a>
                         </li>
-                        @if(!Auth::check() || !Auth::user()->isAdmin())
 
-                        @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('/admin')}}">Админка</a>
-                        </li>
-                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -69,6 +63,16 @@
                         </li>
                         @endif
                         @else
+                        @if(!Auth::check() || !Auth::user()->isAdmin())
+
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/admin')}}">Админка</a>
+                        </li>
+                        @endif
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/cart') }}">Козрзина</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}

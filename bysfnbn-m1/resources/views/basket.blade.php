@@ -1,35 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
+    <div class="container">
+        <div class="row">
 
-        <h1>Корзина</h1>
+            <h1>Корзина</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Название продукта</th>
-                    <th>Цена</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+            <div class="row row-cols-2">
                 @foreach ($cart_items as $item)
-                <tr>
-<<<<<<< HEAD
-                    <td>{{ $item->prod->name }}</td>
-                    <td>{{ $item->prod->price }}</td>
-                    <td><a href="{{ route('cartdelete', $item->id) }}">Удалить</a></td>
-=======
-                    <td>{{ $item->name }}</td>
-                    <td>{{ $item->price }}</td>
-                    <td><a href="{{ route('cartdelete', $item->cart_id) }}">Удалить</a></td>
->>>>>>> 3c259c04aaa426ebd4405d1b71afaadd462e6534
-                </tr>
+                    <!--вывод товара-->
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h1>{{ $item->prod->name }}</h1>
+                                        <!--вывод имени товара с базы-->
+                                        <h3>{{ $item->prod->price }} &#8381</h3>
+                                        <!--вывод цены товара с базы-->
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="{{ route('cartdelete', $item->id) }}">Удалить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
-            </tbody>
-        </table>
+            </div>
+        </div>
     </div>
-</div>
 @endsection
