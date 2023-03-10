@@ -19,10 +19,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo e(url('/')); ?>/style.css">
+
+    <!-- ico -->
+    <link rel="shortcut icon" href="../public/img/icon/gamepad.png" type="image/png">
 </head>
 
 <body>
-    <div id="app">
+    <header id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
@@ -65,7 +68,6 @@
                         <?php endif; ?>
                         <?php else: ?>
                         <?php if(!Auth::check() || !Auth::user()->isAdmin()): ?>
-
                         <?php else: ?>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo e(url('/admin')); ?>">Админка</a>
@@ -97,12 +99,33 @@
                 </div>
             </div>
         </nav>
+    </header>
+    <main class="py-4">
+        <?php echo $__env->yieldContent('content'); ?>
+    </main>
 
-        <main class="py-4">
-            <?php echo $__env->yieldContent('content'); ?>
-        </main>
-    </div>
+
+    <footer class="bg-light text-center text-white">
+        <div class="container">
+
+            <div class="row justify-content-center mb-3">
+                <div class="col-1">
+                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/youtube.png" alt=""></a>
+                </div>
+                <div class="col-1">
+                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/vk.png" alt=""></a>
+                </div>
+                <div class="col-1">
+                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/telegram.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023
+            <a class="text-white" href="<?php echo e(url('/')); ?>">True Games</a>
+        </div>
+    </footer>
 </body>
 
-</html>
-<?php /**PATH /srv/users/fvfueztk/bysfnbn-m1/resources/views/layouts/app.blade.php ENDPATH**/ ?>
+</html><?php /**PATH /srv/users/fvfueztk/bysfnbn-m1/resources/views/layouts/app.blade.php ENDPATH**/ ?>

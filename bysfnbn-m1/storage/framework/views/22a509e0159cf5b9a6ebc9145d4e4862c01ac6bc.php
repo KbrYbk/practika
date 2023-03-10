@@ -12,7 +12,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 По году
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton1">
                                 <li>
                                     <a href="<?php echo e(url('/catalog/sort')); ?>/year/desc" class="dropdown-item">По году ↓</a>
                                 </li>
@@ -27,7 +27,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 По наименованию
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton2">
+                            <ul class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                 <li>
                                     <a href="<?php echo e(url('/catalog/sort')); ?>/name/desc" class="dropdown-item">По наименованию ↓</a>
                                 </li>
@@ -40,9 +40,9 @@
                         <div class="dropdown mx-1">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                По цене
+                                По цене &#8381
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton3">
                                 <li>
                                     <a href="<?php echo e(url('/catalog/sort')); ?>/price/desc" class="dropdown-item">По цене ↓</a>
                                 </li>

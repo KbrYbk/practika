@@ -186,7 +186,7 @@ unset($__errorArgs, $__bag); ?>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="rules" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Правила')); ?></label>
+                            <label for="rules" class="col-md-4 col-form-label text-md-end"><a href="<?php echo e(url('/rules')); ?>"><?php echo e(__('Правила')); ?></a></label>
 
                             <div class="col-md-6 mt-2">
                                 <input id="rules" type="checkbox" class=" <?php $__errorArgs = ['rules'];
@@ -204,7 +204,7 @@ unset($__errorArgs, $__bag); ?>" name="rules" required autocomplete="rules">
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <?php echo e(__('Register')); ?>
+                                    <?php echo e(__('Регистрация')); ?>
 
                                 </button>
                             </div>

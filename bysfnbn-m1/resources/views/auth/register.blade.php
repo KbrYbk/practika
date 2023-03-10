@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="rules" class="col-md-4 col-form-label text-md-end">{{ __('Правила') }}</label>
+                            <label for="rules" class="col-md-4 col-form-label text-md-end"><a href="{{ url('/rules') }}">{{ __('Правила') }}</a></label>
 
                             <div class="col-md-6 mt-2">
                                 <input id="rules" type="checkbox" class=" @error('rules') is-invalid @enderror" name="rules" required autocomplete="rules">
@@ -115,7 +115,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Регистрация') }}
                                 </button>
                             </div>
                         </div>

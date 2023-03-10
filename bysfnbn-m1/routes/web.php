@@ -24,6 +24,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/where', function () { // где нас найти
     return view('where');
 });
+
+Route::get('/rules', function () { // где нас найти
+    return view('rules');
+});
 Route::get('/', [ProductController::class, 'about']); //слайдер о нас
 
 //каталог
