@@ -55,3 +55,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/cart/make/{product_id}', [BasketShop::class, 'make'])->name('cartmake');
     Route::get('/cart/delete/{cart_id}', [BasketShop::class, 'delete'])->name('cartdelete');
 });
+Route::post('cart/update/{id}',[BasketShop::class,'update'])->name('cartUpadate');
