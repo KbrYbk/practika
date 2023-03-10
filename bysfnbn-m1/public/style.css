@@ -1,24 +1,49 @@
-html{
-    height: 100%;
-}
-body{
-    display: flex;
-    flex-direction: column;
+html {
     height: 100%;
 }
 
-header{
+header {
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 0 0 auto;
- }
-main{
+    background-color: #1C0A00;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #1C0A00;
+}
+
+
+main {
     /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 1 0 auto;
- }
- footer{
+}
+
+footer {
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 0 0 auto;
- }
+    background-color: #685858;
+}
+
+.card-header {
+    background-color: #CC9544;
+    border-radius: .375rem;
+    font-weight: 900;
+}
+
+.card-body {
+    font-weight: 900;
+    background-color: #F8CBA6;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    background-color: #FFE7CC;
+}
+
 
 
 .carousel-img {
@@ -29,16 +54,62 @@ main{
 .name_tovar {
     /*название товара в слайдере*/
     color: #fff;
-    text-shadow: 1px 0 5px #000, /*тень справа*/
-        0 1px 5px #000, /*тень снизу*/
-        -1px 0 5px #000, /*тень слева*/
-        0 -1px 5px #000; /*тень сверху*/
+    text-shadow: 1px 0 5px #000,
+        /*тень справа*/
+        0 1px 5px #000,
+        /*тень снизу*/
+        -1px 0 5px #000,
+        /*тень слева*/
+        0 -1px 5px #000;
+    /*тень сверху*/
 }
-img{
+
+.bc {
+    height: 700px;
+}
+
+img {
     border-radius: .375rem;
 }
 
-.icon_foot{
+.icon_foot {
     width: 70px;
     height: 70px;
+}
+
+.btn-success{
+    border-color: #898121;
+    background-color: #898121;
+}
+
+.btn-info{
+    border-color: #F7F1E5;
+    background-color: #F7F1E5;
+}
+.btn-primary{
+    border-color: #4C4B16;
+    background-color: #4C4B16;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:checked{
+    border-color: #898121;
+    background-color: #898121;
+}
+li{
+    list-style-type:none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 50px;
 }

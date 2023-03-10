@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row">
 
-            <h1>Корзина</h1>
+            <h1 class="text-light">Корзина</h1>
 
-            <div class="row row-cols-2">
+            <div class="row row-cols-2 align-items-center">
                 @foreach ($cart_items as $item)
                     <!--вывод товара-->
                     <div class="col mb-3">

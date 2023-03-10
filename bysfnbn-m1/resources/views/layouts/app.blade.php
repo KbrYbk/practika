@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="{{ url('/') }}/style.css">
 
     <!-- ico -->
-    <link rel="shortcut icon" href="../public/img/icon/gamepad.png" type="image/png">
+    <link rel="shortcut icon" href="{{url('img/icon')}}/gamepad.png" type="image/png">
 </head>
 
 <body>
     <header id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-black shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -73,7 +73,7 @@
                         </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/cart') }}">Козрзина</a>
+                            <a class="nav-link" href="{{ url('/cart') }}">Корзина</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -102,23 +102,23 @@
     </main>
 
 
-    <footer class="bg-light text-center text-white">
+    <footer class="text-center text-white">
         <div class="container">
 
-            <div class="row justify-content-center mb-3">
-                <div class="col-1">
-                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/youtube.png" alt=""></a>
+            <div class="row row-cols-3 justify-content-center my-3">
+                <div class="col-lg-1">
+                    <a class="m-1" href="https://www.youtube.com" target="_blank" role="button"><img class="icon_foot" src="{{url('img/icon')}}/youtube.png" alt="YouTube"></a>
                 </div>
-                <div class="col-1">
-                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/vk.png" alt=""></a>
+                <div class="col-lg-1">
+                    <a class="m-1" href="https://vk.com" target="_blank" role="button"><img class="icon_foot" src="{{url('img/icon')}}/vk.png" alt="VK"></a>
                 </div>
-                <div class="col-1">
-                    <a class="m-1" href="" role="button"><img class="icon_foot" src="../public/img/icon/telegram.png" alt=""></a>
+                <div class="col-lg-1">
+                    <a class="m-1" href="https://web.telegram.org/k/" target="_blank" role="button"><img class="icon_foot" src="{{url('img/icon')}}/telegram.png" alt="Telegram"></a>
                 </div>
             </div>
 
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3" style="background-color: #594545;">
             © 2023
             <a class="text-white" href="{{ url('/') }}">True Games</a>
         </div>

@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h1 class="text-center mb-3">Админ панель</h1>
-    <h4 class="text-center">Редактирование товара</h4>
+    <h1 class="text-center mb-3 text-light">Админ панель</h1>
+    <h4 class="text-center text-light">Редактирование товара</h4>
     <a class="btn btn-info mb-3" href="{{url('/admin/product')}}" role="button">Опубликовать товар</a><!--Кнопка на создание товара-->
     <div class="row row-cols-2">
         @foreach ($prod as $pp) <!--вывод товара-->
@@ -34,7 +34,7 @@
         </div>
         @endforeach
     </div>
-    <h4 class="text-center">Редактирование категории</h4>
+    <h4 class="text-center text-light">Редактирование категории</h4>
     <a class="btn btn-info mb-3" href="{{url('/admin/category')}}" role="button">Добавить категорию</a><!--Кнопка на добавление категории-->
     <div class="row row-cols-2">
         @foreach ($cat as $pp) <!--вывод категорий-->
