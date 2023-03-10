@@ -44,7 +44,7 @@
                         <div class="dropdown mx-1">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                По цене
+                                По цене &#8381
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
                                 <li>
